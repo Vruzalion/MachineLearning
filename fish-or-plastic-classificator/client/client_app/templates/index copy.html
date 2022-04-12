@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Abaphathi</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="static/css/custom.css">
+
+        <!-- Custom Fonts -->
+        <script src="https://use.fontawesome.com/470b91f216.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <script src="static/js/jquery/jquery.min.js" charset="utf-8"></script>
+
+    </head>
+
+    <body>
+        <h1>Plastic vs marine animal classifier</h1>
+        <form method="POST" action="/classify">
+            <fieldset>
+                <label for="img_source">From where do you want to load image for test?</label>
+
+                <input type="radio" id="r_1" name="img_source" value="1" checked>
+                <label for="r_1">Using an url</label>
+
+                <input type="radio" id="r_2" name="img_source" value="2">
+                <label for="r_2">From the local storage</label>
+            </fieldset>
+
+            <hr>
+
+            <fieldset id="select_url">
+                <label for="img_url">URL of the image to classify: </label>
+                <input id="img_url" name="img_url" placeholder="image url"  type="url" onkeypress="return event.keyCode!=13">
+                <button id="set_image_button" onclick="setTestImageFromURL(event)">set test image</button>
+                <hr>
+            </fieldset>
+
+            <fieldset id="select_local" style="display:none">
+                <label for="test_file">Select the image to classify: </label>
+                <input id="test_file" name="test_file"  type="file">
+            
+                <hr>
+            </fieldset>
+
+            <div>
+                <img src = "" id="img" width="200" height="200" alt="img" accept="image/*"/> 
+            </div>
+
+            <button type="submit">Classify</button>
+        </form>
+
+        <div>
+            {{ result }}
+        </div>
+
+        <script>
+            var image = document.getElementById("img");
+
+            //gestion du menu pour le mode de sélection de l'image de test
+            var radioMenu = document.getElementsByName("img_source");
+            var selectURL = document.getElementById("select_url");
+            var selectLocal = document.getElementById("select_local");
+
+            for(var i = 0; i < radioMenu.length; i++){
+                radioMenu[i].addEventListener('change', function(){
+                    var menuChoice = this.value;
+                    
+                    if(menuChoice == 1){
+                        selectURL.style.display = "block";
+                        selectLocal.style.display = "none";
+                    }else{
+                        selectURL.style.display = "none";
+                        selectLocal.style.display = "block";
+                        console.log(selectURL);
+                    }
+                })
+            }
+
+            //gestion du formulaire pour la sélection de l'image en ligne
+            var url_input = document.getElementById("img_url");
+           
+            function setTestImageFromURL(e){
+    
+                if(url_input){
+                    image.setAttribute('src', url_input.value);
+                }
+
+                e.preventDefault();
+            }
+
+            //gestion du formulaire de sélection de l'image en local
+            var file_input = document.getElementById("test_file");
+
+            file_input.addEventListener("change", function(){
+                var test_image = file_input.files[0];
+                image.setAttribute('src', URL.createObjectURL(test_image));
+                console.log(image);
+            })
+
+        </script>
+        
+        <!-- Bootstrap Core JavaScript -->
+        <script src="static/js/bootstrap/bootstrap.min.js" charset="utf-8"></script>
+
+    </body>
+
+</html>

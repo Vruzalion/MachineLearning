@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+  background: #BE3144;
+  font-family: Poppins;
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+}
+.nav-link{
+  font-size: 22px;  
+  text-decoration: none;
+  display: block;
+  padding: 0.9em;
+  color: white;
+}
+a:hover {
+    background: #457ebe;
+}
+
+@media all and (max-width: 600px) {
+    .navbar {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navbar a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+   
+  }
+  @media all and (max-width: 800px) {
+    .navbar {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+    }
+
+  }
+  
+  /* Small screens */
+  @media all and (max-width: 600px) {
+    .navbar {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+      
+    }
+  .welcome-section {
+  text-align: center;
+}
+
+  .ababati{
+    position: relative;
+    left: 40%;
+  }
+  .welcome-section h1{
+    font-size: 60px;
+    font-family: Raleway, sans-serif;
+    margin-top: 300px;
+  
+  }
+  }
+  
+
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -8px;
+    height: 791px;
+    color: white;
+    background: linear-gradient(-120deg, rgb(24, 24, 24), rgb(61, 61, 61));
+    
+}
+.welcome-section h1{
+  font-size: 60px;
+  font-family: Raleway, sans-serif;
+
+}
+
+.welcome-section p{
+  font-size: 30px;
+  font-weight: 200;
+  font-family: poppins, sans-serif;
+  color: #f37889;
+  position: relative;
+  bottom: 60px;
+}
+
+.projects{
+    background-color: #4b5772;
+    margin: 5px -8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.projects header h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+#project-tile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-img-top{
+    width: 380px;
+    height: 330px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 23px;
+}
+
