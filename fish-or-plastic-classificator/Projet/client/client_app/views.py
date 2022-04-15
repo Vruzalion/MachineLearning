@@ -20,13 +20,12 @@ def index():
             #input from a link
             image_url = request.form['img_url']
 
-            result = classify_from_image_url(image_url)
+            result = classify_from_image_url("blob:http://localhost:8001/89b1f3b5-9312-401a-8324-dd01514fb75c")
 
         else:
-            image_url = request.form['img_url']
-            result = classify_from_image_url(image_url)
+            print(dir(request.form['test_file']))
         
-        return render_template('index.html', result=result, image_url=image_url)
+        return render_template('index.html', result=result)
 
     return render_template('index.html')
 
@@ -44,7 +43,7 @@ def classify_from_image_url(image_url):
 
     i+=1
 
-    img_height, img_width = 80, 80
+    img_height, img_width = 200, 200
     class_names = ["fish", "plastic"]
 
     img = tf.keras.utils.load_img(
