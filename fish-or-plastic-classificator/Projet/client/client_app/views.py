@@ -26,7 +26,7 @@ def index():
             image_url = request.form['img_url']
             result = classify_from_image_url(image_url)
         
-        return render_template('index.html', result=result)
+        return render_template('index.html', result=result, image_url=image_url)
 
     return render_template('index.html')
 
