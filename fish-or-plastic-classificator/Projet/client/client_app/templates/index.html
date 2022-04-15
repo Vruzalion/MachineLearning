@@ -1,125 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/def1.css">
+    <title>ABAPATHI</title>
+</head>
+<body>
+    <div class="container" id="container">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Abaphathi</title>
-
-        <!-- Bootstrap Core CSS -->
-        <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="static/css/custom.css">
-
-        <!-- Custom Fonts -->
-        <script src="https://use.fontawesome.com/470b91f216.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-        <script src="static/js/jquery/jquery.min.js" charset="utf-8"></script>
-
-    </head>
-
-    <body>
-        <h1>Plastic vs marine animal classifier</h1>
-        <form method="POST" action="/classify#result">
-            <fieldset>
-                <label for="img_source">From where do you want to load image for test?</label>
-
-                <input type="radio" id="r_1" name="img_source" value="1" checked>
-                <label for="r_1">Using an url</label>
-
-                <input type="radio" id="r_2" name="img_source" value="2">
-                <label for="r_2">From the local storage</label>
-            </fieldset>
-
-            <hr>
-
-            <fieldset id="select_url">
-                <label for="img_url">URL of the image to classify: </label>
-                <input id="img_url" name="img_url" placeholder="image url"  type="url" onkeypress="return event.keyCode!=13">
-                <button id="set_image_button" onclick="setTestImageFromURL(event)">set test image</button>
-                <hr>
-            </fieldset>
-
-            <fieldset id="select_local" style="display:none">
-                <label for="test_file">Select the image to classify: </label>
-                <input id="test_file" name="test_file"  type="file">
-                <input id="img_url" name="img_url"  type="text" onkeypress="return event.keyCode!=13">
-                <hr>
-            </fieldset>
-
-            <div>
-                <img src = "" id="img" width="200" height="200" alt="img" accept="image/*"/> 
-            </div>
-
-            <button type="submit">Classify</button>
-        </form>
-
-        <div style="height: 500px">
-
-        </div>
-
-        <div id="result">
-            {{ result }}
-        </div>
-
-        <script>
-            var image = document.getElementById("img");
-
-            //gestion du menu pour le mode de sélection de l'image de test
-            var radioMenu = document.getElementsByName("img_source");
-            var selectURL = document.getElementById("select_url");
-            var selectLocal = document.getElementById("select_local");
-
-            for(var i = 0; i < radioMenu.length; i++){
-                radioMenu[i].addEventListener('change', function(){
-                    var menuChoice = this.value;
-                    
-                    if(menuChoice == 1){
-                        selectURL.style.display = "block";
-                        selectLocal.style.display = "none";
-                    }else{
-                        selectURL.style.display = "none";
-                        selectLocal.style.display = "block";
-                        console.log(selectURL);
-                    }
-                })
-            }
-
-            //gestion du formulaire pour la sélection de l'image en ligne
-            var url_input = document.getElementById("img_url");
-           
-            function setTestImageFromURL(e){
+        <nav id="navbar" class="navbar">
+            <h1 class="ababati" style="color:white;">ABAPATHI</h1>
+            <a id="nav-link" class="nav-link" href="#welcome-section">About</a>
+            <a id="nav-link" class="nav-link" href="#projects">Image Classifier</a>
+        </nav>
     
-                if(url_input){
-                    image.setAttribute('src', url_input.value);
-                }
-
-                e.preventDefault();
-            }
-
-            //gestion du formulaire de sélection de l'image en local
-            var file_input = document.getElementById("test_file");
-
-            file_input.addEventListener("change", function(){
-                var url_input = document.getElementById("img_url");
-
-                var test_image = file_input.files[0];
-                image.setAttribute('src', URL.createObjectURL(test_image));
-
-                console.log(url_input)
-                console.log(URL.createObjectURL(test_image))
-                url_input.setAttribute('value', URL.createObjectURL(test_image));
-            })
-
-        </script>
+        <div class="welcome-section" id="welcome-section">
+            <h1 style="text-align:center;">Hey! Welcome to ABAPATHI</h1>
+            <p style="text-align:center;"><i>This is a small application that uses a model based on 
+                tensorflow architecture to distinguish between an image of fish and an image of plastic.</i></p>
+        </div>
         
-        <!-- Bootstrap Core JavaScript -->
-        <script src="static/js/bootstrap/bootstrap.min.js" charset="utf-8"></script>
+        <div class="projects" id="projects">
+            <header>
+                <h2>Image Classifier</h2>
+                <p style="text-align:center; font-size:30px">In this section, we will proceed to the classification of an image of your choice</p>
+            </header>
+    
+            <div id="project-tile" class="project-tile">
+                <div class="card" width="18rem">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-rghii3pUoE07AGgGSyZfjyCKI7Msb5LbQ1SuMOseE_R6of8Gs5iBuuaTUB2JgFghAKI&usqp=CAU" alt="image de poisson">
+                    <div class="card-body">
+                      <h5 class="card-tile"><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-rghii3pUoE07AGgGSyZfjyCKI7Msb5LbQ1SuMOseE_R6of8Gs5iBuuaTUB2JgFghAKI&usqp=CAU">Exemple d'image de poisson</a></h5>
+                    </div>
+                </div>
+                <div class="card" width="18rem">
+                    <img class="card-img-top" src="https://cdn.givingcompass.org/wp-content/uploads/2019/04/04183117/Fighting-Plastic-Pollution-With-Bags-That-Dissolve-in-Water.jpg">
+                    <div class="card-body">
+                      <h5 class="card-tile"><a href="https://cdn.givingcompass.org/wp-content/uploads/2019/04/04183117/Fighting-Plastic-Pollution-With-Bags-That-Dissolve-in-Water.jpg">Exemple d'image de déchet plastique</a></h5>
+                    </div>
+                </div>
+            </div> 
 
-    </body>
+            <div class="selection" id="selection">
+                <form method="POST" action="/classify#result">
+                    <h2>Select the source of your image (from your computer or from internet)</h2>
+                    <fieldset>
+                        <label for="img_source">From where do you want to load image for test?</label>
+        
+                        <input type="radio" id="r_1" name="img_source" value="1" checked>
+                        <label for="r_1">Using an url</label>
+        
+                        <input type="radio" id="r_2" name="img_source" value="2">
+                        <label for="r_2">From the local storage</label>
+                    </fieldset>
+        
+                    <hr>
+                    
+        
+                    <fieldset id="select_url">
+                        <label for="img_url">URL of the image to classify: </label>
+                        <input id="img_url" name="img_url" placeholder="image url"  type="url" onkeypress="return event.keyCode!=13">
+                        <button id="set_image_button" onclick="setTestImageFromURL(event)">set test image</button>
+                        <hr>
+                    </fieldset>
+        
+                    <fieldset id="select_local" style="display:none">
+                        <label for="test_file">Select the image to classify: </label>
+                        <input id="test_file" name="test_file"  type="file">
+                        <input id="img_url" name="img_url"  type="text" onkeypress="return event.keyCode!=13" style="display:none">
+                        <hr>
+                    </fieldset>
+        
+                    <div>
+                        <img src = "" id="img" width="200" height="200" alt="img" accept="image/*"/> 
+                    </div>
+        
+                    <button id="submit" type="submit">Classify</button>
+                </form>
+        
+                <div id="result">
+                    {{ result }}
+                </div>
+        
+                <script>
+                    var image = document.getElementById("img");
+        
+                    //gestion du menu pour le mode de sélection de l'image de test
+                    var radioMenu = document.getElementsByName("img_source");
+                    var selectURL = document.getElementById("select_url");
+                    var selectLocal = document.getElementById("select_local");
+        
+                    for(var i = 0; i < radioMenu.length; i++){
+        
+                        radioMenu[i].addEventListener('change', function(){
+                            console.log(this.value);
+                            var menuChoice = this.value;
+                            console.log(menuChoice);
+        
+                            if(menuChoice == 1){
+                                selectURL.style.display = "block";
+                                selectLocal.style.display = "none";
+                            }else{
+                                selectURL.style.display = "none";
+                                selectLocal.style.display = "block";
+                                console.log(selectURL);
+                            }
+                        })
+                    }
+        
+                    //gestion du formulaire pour la sélection de l'image en ligne
+                    var url_input = document.getElementById("img_url");
+                   
+                    function setTestImageFromURL(e){
+            
+                        if(url_input){
+                            image.setAttribute('src', url_input.value);
+                        }
+        
+                        e.preventDefault();
+                    }
+        
+                    //gestion du formulaire de sélection de l'image en local
+                    var file_input = document.getElementById("test_file");
+        
+                    file_input.addEventListener("change", function(){
+                        var url_input = document.getElementById("img_url");
+        
+                        var test_image = file_input.files[0];
+                        image.setAttribute('src', URL.createObjectURL(test_image));
+        
+                        console.log(url_input)
+                        console.log(URL.createObjectURL(test_image))
+                        url_input.setAttribute('value', URL.createObjectURL(test_image));
+                    })
+        
+                </script>
+                
+                
+                <!-- Bootstrap Core JavaScript -->
+                <script src="static/js/bootstrap/bootstrap.min.js" charset="utf-8"></script>
+        
+        </div>
+        </div>
 
+        
+</body>
 </html>
