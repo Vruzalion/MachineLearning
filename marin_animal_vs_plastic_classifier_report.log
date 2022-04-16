@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.29)  16 APR 2022 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.29)  17 APR 2022 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -464,183 +464,188 @@ File: fish_3.jpg Graphic file (type jpg)
 <use fish_3.jpg>
 Package pdftex.def Info: fish_3.jpg  used on input line 164.
 (pdftex.def)             Requested size: 131.0317pt x 131.026pt.
- [4 <./plastic_1.jpg> <./plastic_2.jpg> <./plastic_3.jpg> <./fish_1.jpg> <./fis
-h_2.jpg> <./fish_3.jpg>]
-<cnn_architecture.jpeg, id=92, 1259.70625pt x 425.59pt>
-File: cnn_architecture.jpeg Graphic file (type jpg)
-<use cnn_architecture.jpeg>
-Package pdftex.def Info: cnn_architecture.jpeg  used on input line 194.
-(pdftex.def)             Requested size: 465.39204pt x 157.22986pt.
-
-Overfull \hbox (28.64314pt too wide) in paragraph at lines 194--195
- [] 
- []
-
-<our_nn_architecture.png, id=94, 1854.93pt x 574.145pt>
-File: our_nn_architecture.png Graphic file (type png)
-<use our_nn_architecture.png>
-Package pdftex.def Info: our_nn_architecture.png  used on input line 220.
-(pdftex.def)             Requested size: 507.97038pt x 157.22986pt.
-
-Overfull \hbox (71.22148pt too wide) in paragraph at lines 220--221
- [] 
- []
-
-[5 <./cnn_architecture.jpeg>]
-<ill_1.png, id=100, 1067.99pt x 414.54875pt>
-File: ill_1.png Graphic file (type png)
-<use ill_1.png>
-Package pdftex.def Info: ill_1.png  used on input line 251.
-(pdftex.def)             Requested size: 419.78996pt x 162.94719pt.
-
-Overfull \hbox (12.41576pt too wide) in paragraph at lines 251--252
-[][] 
- []
-
-[6 <./our_nn_architecture.png>]
-<ill_2.png, id=107, 1067.99pt x 414.54875pt>
-File: ill_2.png Graphic file (type png)
-<use ill_2.png>
-Package pdftex.def Info: ill_2.png  used on input line 255.
-(pdftex.def)             Requested size: 419.78996pt x 162.94719pt.
-
-Overfull \hbox (12.41576pt too wide) in paragraph at lines 255--256
-[][] 
- []
-
-<ill_3.png, id=108, 854.19125pt x 311.1625pt>
-File: ill_3.png Graphic file (type png)
-<use ill_3.png>
-Package pdftex.def Info: ill_3.png  used on input line 259.
-(pdftex.def)             Requested size: 469.68935pt x 171.09642pt.
-
-Overfull \hbox (62.31514pt too wide) in paragraph at lines 259--260
-[][] 
- []
-
-<ill_4.png, id=109, 658.46pt x 236.885pt>
-File: ill_4.png Graphic file (type png)
-<use ill_4.png>
-Package pdftex.def Info: ill_4.png  used on input line 263.
-(pdftex.def)             Requested size: 452.95137pt x 162.94719pt.
-
-Overfull \hbox (45.57716pt too wide) in paragraph at lines 263--264
-[][] 
- []
-
-[7 <./ill_1.png> <./ill_2.png> <./ill_3.png>]
-<ill_5.png, id=120, 430.60875pt x 179.67125pt>
-File: ill_5.png Graphic file (type png)
-<use ill_5.png>
-Package pdftex.def Info: ill_5.png  used on input line 267.
-(pdftex.def)             Requested size: 439.37936pt x 183.31714pt.
-
-Overfull \hbox (32.00516pt too wide) in paragraph at lines 267--268
-[][] 
- []
-
-[8 <./ill_4.png> <./ill_5.png>]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-281.
- (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-81.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+82.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-281.
+182.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-281.
+182.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 281.
+(Font)              <12> on input line 182.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 281.
+(Font)              <8> on input line 182.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 281.
+(Font)              <6> on input line 182.
+ [4 <./plastic_1.jpg> <./plastic_2.jpg> <./plastic_3.jpg> <./fish_1.jpg> <./fis
+h_2.jpg> <./fish_3.jpg>] [5]
+<cnn_architecture.jpeg, id=104, 1259.70625pt x 425.59pt>
+File: cnn_architecture.jpeg Graphic file (type jpg)
+<use cnn_architecture.jpeg>
+Package pdftex.def Info: cnn_architecture.jpeg  used on input line 233.
+(pdftex.def)             Requested size: 434.08015pt x 146.65495pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Overfull \hbox (26.70595pt too wide) in paragraph at lines 233--234
+ [] 
+ []
+
+<our_nn_architecture.png, id=106, 1854.93pt x 574.145pt>
+File: our_nn_architecture.png Graphic file (type png)
+<use our_nn_architecture.png>
+Package pdftex.def Info: our_nn_architecture.png  used on input line 259.
+(pdftex.def)             Requested size: 473.80756pt x 146.65495pt.
+
+Overfull \hbox (66.43335pt too wide) in paragraph at lines 259--260
+ [] 
+ []
+
+[6 <./cnn_architecture.jpeg> <./our_nn_architecture.png>]
+<ill_1.png, id=113, 1067.99pt x 414.54875pt>
+File: ill_1.png Graphic file (type png)
+<use ill_1.png>
+Package pdftex.def Info: ill_1.png  used on input line 303.
+(pdftex.def)             Requested size: 419.78996pt x 162.94719pt.
+
+Overfull \hbox (12.41576pt too wide) in paragraph at lines 303--304
+[][] 
+ []
+
+[7]
+<ill_2.png, id=120, 1067.99pt x 414.54875pt>
+File: ill_2.png Graphic file (type png)
+<use ill_2.png>
+Package pdftex.def Info: ill_2.png  used on input line 307.
+(pdftex.def)             Requested size: 419.78996pt x 162.94719pt.
+
+Overfull \hbox (12.41576pt too wide) in paragraph at lines 307--308
+[][] 
+ []
+
+<ill_3.png, id=121, 854.19125pt x 311.1625pt>
+File: ill_3.png Graphic file (type png)
+<use ill_3.png>
+Package pdftex.def Info: ill_3.png  used on input line 311.
+(pdftex.def)             Requested size: 469.68935pt x 171.09642pt.
+
+Overfull \hbox (62.31514pt too wide) in paragraph at lines 311--312
+[][] 
+ []
+
+<ill_4.png, id=122, 658.46pt x 236.885pt>
+File: ill_4.png Graphic file (type png)
+<use ill_4.png>
+Package pdftex.def Info: ill_4.png  used on input line 315.
+(pdftex.def)             Requested size: 452.95137pt x 162.94719pt.
+
+Overfull \hbox (45.57716pt too wide) in paragraph at lines 315--316
+[][] 
+ []
+
+[8 <./ill_1.png> <./ill_2.png> <./ill_3.png>]
+<ill_5.png, id=132, 430.60875pt x 179.67125pt>
+File: ill_5.png Graphic file (type png)
+<use ill_5.png>
+Package pdftex.def Info: ill_5.png  used on input line 319.
+(pdftex.def)             Requested size: 439.37936pt x 183.31714pt.
+
+Overfull \hbox (32.00516pt too wide) in paragraph at lines 319--320
+[][] 
+ []
+
+[9 <./ill_4.png> <./ill_5.png>]
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+333.
+ (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 [][]$\OT1/lmtt/m/n/12 https : / / www\OML/lmm/m/it/12 :\OT1/lmtt/m/n/12 hindawi
 \OML/lmm/m/it/12 :\OT1/lmtt/m/n/12 com / journals / acisc / 2020 / 3738108 / #r
 esults -[] and -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 [][]$\OT1/lmtt/m/n/12 https : / / towardsdatascience\OML/lmm/m/it/12 :\OT1/lmtt
 /m/n/12 com / identifying -[] and -[] removing -[] marine -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 [][]$\OT1/lmtt/m/n/12 https : / / www\OML/lmm/m/it/12 :\OT1/lmtt/m/n/12 unep\OM
 L/lmm/m/it/12 :\OT1/lmtt/m/n/12 org / news -[] and -[] stories / story / touris
 m -[] pandemic -[] world -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
 [][]$\OT1/lmtt/m/n/12 https : / / www\OML/lmm/m/it/12 :\OT1/lmtt/m/n/12 kaggle\
 OML/lmm/m/it/12 :\OT1/lmtt/m/n/12 com / datasets / sripaadsrinivasan / fish -[]
  species -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--294
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 [][]$\OT1/lmtt/m/n/12 https : / / drive\OML/lmm/m/it/12 :\OT1/lmtt/m/n/12 googl
 e\OML/lmm/m/it/12 :\OT1/lmtt/m/n/12 com / drive / folders / 1fsS[]u2QpbRGynYkP6
  -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
 [][]$\OT1/lmtt/m/n/12 https : / / towardsdatascience\OML/lmm/m/it/12 :\OT1/lmtt
 /m/n/12 com / a -[] comprehensive -[] guide -[] to -[]
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
-[9
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
+[10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
  (./marin_animal_vs_plastic_classifier_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
 Package rerunfilecheck Info: File `marin_animal_vs_plastic_classifier_report.ou
 t' has not changed.
-(rerunfilecheck)             Checksum: 9EB8C4F185E7E229ABCC668DDDA71AC6;753.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
+(rerunfilecheck)             Checksum: 82BF0C54CC4D16C55D97FEDD2719DAC9;771.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
  ) 
 Here is how much of TeX's memory you used:
- 6833 strings out of 483183
- 105511 string characters out of 5966292
+ 6834 strings out of 483183
+ 105518 string characters out of 5966292
  383259 words of memory out of 5000000
  21664 multiletter control sequences out of 15000+600000
  569222 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,11n,45p,1103b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/sh
-are/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/
-lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on marin_animal_vs_plastic_classifier_report.pdf (9 pages, 10739
-16 bytes).
+ 34i,11n,45p,1103b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/sha
+re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
+lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf
+/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex1
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/font
+s/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmtt12.pfb>
+Output written on marin_animal_vs_plastic_classifier_report.pdf (10 pages, 1120
+538 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 216 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  159 words of extra memory for PDF output out of 10000 (max. 10000000)
 

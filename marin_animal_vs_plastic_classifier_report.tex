@@ -84,7 +84,7 @@ To successfully achieve this project, we followed a methodology based on four (0
     
     \item Data preprocessing
 
-    \item Building Deep Learning algorithm using convultional neural network
+    \item Building Deep Learning/Machine Learning algorithm using convultional neural network
 
     \item Training and testing
 
@@ -167,62 +167,103 @@ Below we have some examples of the dataset images.
 
 \end{center}
 
-\subsection{Building Deep Learning algorithm}
+\subsection{Building Deep Learning/Machine Learning algorithms}
 
-The problem we are trying to solve falls into the category of image processing. We have therefore chosen to use neural networks to solve it, and more precisely Convolutional Neural Networks (CNN).
+The problem we are trying to solve falls into the category of image processing. We tried several approaches to solve it, including some Machine Learning algorithms like k-Nearest Neighbor Classifier, SVM and a deep learning algorithm, precisely a Convolutional Neural Networks (CNN). We evaluated the performance of each of these models and finally chose the best one. 
 
-The name "convolutional neural network" indicates that the network employs a mathematical operation called convolution. In mathematics convolution is a mathematical operation on two functions that produces a third function that expresses how the shape of one is modified by the other.This kind of neural network uses convolution in place of general matrix multiplication in at least one of their layers. Their architecture involves several types of layers, each playing a specific role. 
-
-\begin{itemize}
-
-    \item Convolutional layer
-
-It is the core building block of the CNN, and is where the majority of computation occurs. To work it requires an input data, a filter or kernel and a feature map. The filter will move across the receptive fields of the image, checking if the feature is present. This process help to detect features present on the image such as edges, color, gradient orientation.
-
-    \item Pooling layer
-
-This layer conducts dimensionality reduction, reducing the number of parameters in the input. The pooling operation sweeps a filter across the entire input, bu the difference is that this filter does not have anay weights. Instead, the kernel applies an aggregation function to the values within the receptive field, populating the output array. There are mainly Max Pooling and Average Pooling. Even if a lot of information is lost in the pooling layer, the benefit is that it helps to reduce the complexity, improve efficiency, and limit the risk of overfitting.
-
-    \item Dense layer or fully-connected layer
-
-For a such layer, each node in the output layer connects directly to a node in the previous layer. This layer performs the task of classification based on the features extracted through the previous layers and their different filters. This layer usually leverage a softmax activation function to classifiy inputs appropriately, producing a probability from 0 to 1, whereas convolutional and pooling layers tend to use ReLu functions.
-
-\end{itemize}
-
-\begin{center}
-
-    \includegraphics[height = 0.36 \linewidth]{cnn_architecture.jpeg}
-
-
-    \textbf{Figure 4: CNN architecture }\cite{cnn_architecture}
-
-\end{center}
-
-The architecture of the neural network we used is as follows:
-
+The main challenges faced when solving the image classification problem are: viewpoint orientation, scale variation, deformation, occlusion, illumination conditions, background clutter and intra-class variation. Thus, a good model has to overcome all, if not most of these challenges.
 
 \begin{itemize}
 
-    \item A rescaling layer to bring the pixel values in the interval [0, 1].
+    \item{K-Nearest Neighbor Classifier}
 
-    \item 04 series of convolution layer followed by a max pooling layer.
+    Clearly the simplest approach, it works as follow: the image to classify will be compared to every single image of the training images, and the predicted label is voted by the label of the k closest images of the training images.
 
-    \item A flatten layer.
+    In our case, to compare two images, we tried two distances: the L1(Manhattan) distance and the L2(Euclidean) distance. Given two images $ I_1 \quad and \quad I_2 $ of size $ n \times m :$
 
-    \item Then follow a dense layer for the classification
-    
-    \item And finally another dense layer for the output.
+    \begin{center}
 
-\end{itemize}
+        $ d_1 (I_1, I_2) = \sum_{i=1, \cdots, n; j = 1, \cdots, m} | I_{1_{(i, j)}} - I_{2_{(i, j)}}| $
 
-\begin{center}
+        $ d_2 (I_1, I_2) = \sqrt{\sum_{i=1, \cdots, n; j = 1, \cdots, m} (I_{1_{(i, j)}} - I_{2_{(i, j)}})^2} $
 
-    \includegraphics[height = 0.36 \linewidth]{our_nn_architecture.png}
+    \end{center}
+
+    To choose the best value of k, we varied k in the interval 10-100, observing the accuracy of the model each time.
 
 
-    \textbf{Figure 5: Our Neural Network architecture }
+    \item{SVM}
+
+    This is one of the Linear Classifiers. With this approach, we try to model a linear function $ f $ that take an image $ x $  as nput, and return $ L $ numbers giving class scores, $ L $ being the number of label classes.
+
+    \begin{center}
+
+        $ f(x, W) = W x + b $
+
+    \end{center}
+
+    $ W \quad and \quad b $ are the paramaters of the model to be learned.
+
+    In the case of SVM this linear function $ f $ is the equation of the decision boundary used to classify a new input. 
+
+    For non-linearly separable data, it is often used to define an affine application called a kernel to reduce the data to a higher dimensional space where they are linearly separable, which makes classification easier.
+
+    \item{Convolutional Neural Networks(CNN)}
+
+    The name "convolutional neural network" indicates that the network employs a mathematical operation called convolution. In mathematics convolution is a mathematical operation on two functions that produces a third function that expresses how the shape of one is modified by the other.This kind of neural network uses convolution in place of general matrix multiplication in at least one of their layers. Their architecture involves several types of layers, each playing a specific role. 
+
+    \begin{itemize}
+
+        \item Convolutional layer
+
+    It is the core building block of the CNN, and is where the majority of computation occurs. To work it requires an input data, a filter or kernel and a feature map. The filter will move across the receptive fields of the image, checking if the feature is present. This process help to detect features present on the image such as edges, color, gradient orientation.
+
+        \item Pooling layer
+
+    This layer conducts dimensionality reduction, reducing the number of parameters in the input. The pooling operation sweeps a filter across the entire input, bu the difference is that this filter does not have anay weights. Instead, the kernel applies an aggregation function to the values within the receptive field, populating the output array. There are mainly Max Pooling and Average Pooling. Even if a lot of information is lost in the pooling layer, the benefit is that it helps to reduce the complexity, improve efficiency, and limit the risk of overfitting.
+
+        \item Dense layer or fully-connected layer
+
+    For a such layer, each node in the output layer connects directly to a node in the previous layer. This layer performs the task of classification based on the features extracted through the previous layers and their different filters. This layer usually leverage a softmax activation function to classifiy inputs appropriately, producing a probability from 0 to 1, whereas convolutional and pooling layers tend to use ReLu functions.
+
+    \end{itemize}
+
+    \begin{center}
+
+        \includegraphics[height = 0.36 \linewidth]{cnn_architecture.jpeg}
+
+
+        \textbf{Figure 4: CNN architecture }\cite{cnn_architecture}
+
+    \end{center}
+
+    The architecture of the neural network we used is as follows:
+
+
+    \begin{itemize}
+
+        \item A rescaling layer to bring the pixel values in the interval [0, 1].
+
+        \item 04 series of convolution layer followed by a max pooling layer.
+
+        \item A flatten layer.
+
+        \item Then follow a dense layer for the classification
+        
+        \item And finally another dense layer for the output.
+
+    \end{itemize}
+
+    \begin{center}
+
+        \includegraphics[height = 0.36 \linewidth]{our_nn_architecture.png}
+
+
+        \textbf{Figure 5: Our Neural Network architecture }
 
 \end{center}
+
+\end{itemize}
 
 \subsection{Training and testing}
 
@@ -236,7 +277,18 @@ We have trained our model on 30 epochs with 8 steps per epochs.
 
 Since we used a balanced dataset, we considered it relevant to use accuracy as a performance measure for our model.
 
-After training and testing steps, the result was pretty interesting because the model has reached 98\% of accuracy on testing.
+Of all the approaches we used, the best result was obtained with the CNNs, with 98\% of accuracy on testing.
+
+\hspace{50mm}
+
+\begin{tabular}{c c c} \hline
+    Model & accuracy & Model description\\ \hline
+    K-Nearest Neighbor Classifier & 38.4\% & k=10; L1 distance \\ \hline
+    K-Nearest Neighbor Classifier & 40.2\% & k=12; L2 distance \\ \hline
+    SVM & 59.8\% & kernel: RBF function \\ \hline
+    CNNs & 98\% &  \\ \hline
+
+\end{tabular}
 
 \subsubsection{Prototype}
 
